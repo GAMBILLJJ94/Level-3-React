@@ -8,10 +8,10 @@ reportWebVitals();
 
 // var element = React.createElement('h1', { className: 'greeting' }, 'Hello, world!');
 
-const Header = (
-    <h1 className="header" >Header here</h1>
-)
+function Header (){
+    <h1 className="header" >Hello</h1>
+}
 
 // const root = createRoot.render(document.getElementById('root'));
 
-createRoot.render(Header, document.getElementById("root"))
+createRoot.render(< Header />, document.getElementById("root"))
