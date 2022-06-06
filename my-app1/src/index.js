@@ -12,6 +12,6 @@ function Header (){
     <h1 className="header" >Hello</h1>
 }
 
-// const root = createRoot.render(document.getElementById('root'));
+const root = createRoot.render(document.getElementById('root'));
 
-createRoot.render(< Header />, document.getElementById("root"))
+root.render(< Header />)
