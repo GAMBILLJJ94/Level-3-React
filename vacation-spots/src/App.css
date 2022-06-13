@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+.btns{
+    border-radius: 20px;
+    padding:5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+.img {
+    max-width: 200px;
+}
+
+.info{
+   width: 30rem;
+   text-align: center;
+}
+.picAndBtn {
+    text-align: center;
+    margin: 5px;
+}
