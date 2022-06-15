@@ -1,0 +1,60 @@
+body {
+  font-family: sans-serif;
+}
+
+.Navbar {
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 0px 60px;
+  color: white;
+  background-color: purple;
+  background: linear-gradient(to right,#58298d,#8735ab);
+}
+.memeGen{
+  display: flex;
+  align-items: center;
+  margin: 0 4px;
+}
+.meme {
+  max-width: 70px;
+  background-image:none;
+  margin:0 16px 0 0;
+}
+
+.inputBoxes {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+.inputs {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+  height: 50px;
+  border-radius: 10px;
+  border-width: 3px;
+  border-color: lightgrey;
+}
+.meme-button-div{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.Btn {
+  width: 82%;
+  height: 4rem;
+  border-radius: 6px;
+  border-style: none;
+  background: linear-gradient(to right,#58298d,#8735ab);
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.MemeImgDiv {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
