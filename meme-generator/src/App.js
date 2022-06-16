@@ -14,13 +14,14 @@ function App() {
     const randomNum = Math.floor(Math.random() * memeArray.length)
     const {url} = memeArray[randomNum]
     console.log(url)
-    const newMemeUrl = memeArray.map(a => <img>${url}</img>)
-    const newImg = document.createElement("h1")
-    const memeDiv = document.getElementsByClassName("MemeImgDiv")
-    newImg.textContent = url
-    
+    // const newMemeUrl = memeArray.map(a => <img>${url}</img>)
+    // const newImg = document.createElement("h1")
+    // const memeDiv = document.getElementsByClassName("MemeImgDiv")
+    // newImg.textContent = url
   }
-  
+   const [img, setImg] = React.useState()
+
+   
   return (
     <div className="App">
       <header className="Navbar">
