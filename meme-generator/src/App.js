@@ -7,19 +7,30 @@ import React from 'react'
 
 function App() {
 
+const [meme, setMeme] = React.useState({
+  topText:"",
+  bottomText:"",
+  randomMeme:"https://pngimg.com/uploads/trollface/trollface_PNG12.png"
+})
+
 
   function getMeme() {
     
+
     const memeArray = data.data.memes
     const randomNum = Math.floor(Math.random() * memeArray.length)
+    // setMeme(memeArray[randomNum].url)
     const {url} = memeArray[randomNum]
     console.log(url)
-    // const newMemeUrl = memeArray.map(a => <img>${url}</img>)
-    // const newImg = document.createElement("h1")
-    // const memeDiv = document.getElementsByClassName("MemeImgDiv")
-    // newImg.textContent = url
+    setMeme(a => ({
+      ...a,
+      randomMeme: url
+    }))
+    
+
+
   }
-   const [img, setImg] = React.useState()
+   
 
    
   return (
@@ -38,7 +49,7 @@ function App() {
         <button className='Btn' onClick={getMeme}>Get a new meme image 🖼</button>
         
       </div>
-      <div className='MemeImgDiv'><img className='MemeImg'></img></div>
+      <div className='MemeImgDiv'><img className='MemeImg' src={meme.randomMeme}></img></div>
     </div>
   );
 }
