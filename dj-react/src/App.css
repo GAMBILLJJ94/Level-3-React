@@ -6,6 +6,7 @@
     margin:auto;
     grid-template-columns: repeat(17, 3rem);
     grid-template-rows: repeat(15, 4rem);
+    background-color: black;
 }
 
 .square1 {

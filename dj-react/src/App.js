@@ -28,10 +28,23 @@ function App() {
     setColor([color,color,color,"blue"])
   }
 
+  function bigTime0 (){
+    setColor(["gold","blue","blue","gold"])
+  }
 
-// ["white", "white", "white", "white"]
-// ["black","black","black","black"]
+  function bigTime1 (){
+    setColor([color,"magenta",color,"purple"])
+  }
+  function bigTime2 (){
+    setColor(["blue","red","red","blue"])
+  }
+  function bigTime3 (){
+    setColor(["orange","white","white","orange"])
+  }
 
+  function makeNoise (){
+
+  }
 
   return (
     <div className="App">
@@ -45,11 +58,11 @@ function App() {
     <button onClick={topPurp} className='btn'>Party DJ</button>
     <button onClick={leftBlue} className='btn'>Left Blue</button>
     <button onClick={rightBlue} className='btn'>Right Blue</button>
-    <button className='btn'>Big DJ one</button>
-    <button className='btn'>Big DJ Two</button>
-    <button className='btn'>Big DJ Three</button>
-    <button className='btn'>Big DJ Four</button>
-    <button className='btn'>Make Noise</button>
+    <button onClick={bigTime0} className='btn'>Big DJ one</button>
+    <button onClick={bigTime1} className='btn'>Big DJ Two</button>
+    <button onClick={bigTime2} className='btn'>Big DJ Three</button>
+    <button onClick={bigTime3} className='btn'>Big DJ Four</button>
+    <button onClick={makeNoise} className='btn'>Make Noise</button>
     </div>
 
     {/* <Buttons   /> */}
