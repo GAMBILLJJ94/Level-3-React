@@ -1,0 +1,53 @@
+.App {
+    display: grid;
+    height: 60rem;
+    width: 80rem;
+    border: solid gold 3px;
+    margin:auto;
+    grid-template-columns: repeat(17, 3rem);
+    grid-template-rows: repeat(15, 4rem);
+}
+
+.square1 {
+    grid-row: 1/8;
+    grid-column: 1/15;
+    border: solid black 2px;
+    margin:5px;
+}
+
+.square2 {
+    border: solid black 2px;
+    grid-row: 1/8;
+    grid-column: 15/30;
+    margin:5px;
+}
+
+.square3 {
+    border: solid black 2px;
+    grid-row: 8/18;
+    grid-column: 1/15;
+    margin:5px;
+}
+
+.square4 {
+    border: solid black 2px;
+    grid-row: 8/18;
+    grid-column: 15/30;
+    margin:5px;
+}
+
+.btnDiv{
+    border: solid gold 3px;
+    height:5rem;
+    width:79rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 5pc;
+    display: inline-block;
+    padding: 40px;
+}
+
+.btn {
+    height: 4rem;
+    width: 6rem;
+}
