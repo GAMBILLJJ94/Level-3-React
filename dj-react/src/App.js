@@ -5,6 +5,8 @@ import {useState} from 'react'
 
 function App() {
 
+  
+
   const [color, setColor] = useState(
     ["white", "white", "white", "white"])
 
@@ -48,6 +50,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className='header'>DJ React</h1>
       <Colors style0={{backgroundColor: color[0]}}  style1={{backgroundColor: color[1]}} style2={{backgroundColor: color[2]}} style3={{backgroundColor: color[3]}}/>
       <Buttons djSmall={djSmall} topPurp={topPurp} leftBlue={leftBlue} rightBlue={rightBlue} bigTime0={bigTime0} bigTime1={bigTime1} bigTime2={bigTime2} bigTime3={bigTime3} makeNoise={makeNoise}/>
 
