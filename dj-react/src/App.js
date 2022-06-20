@@ -1,11 +1,11 @@
 import './App.css';
 import Colors from './Colors'
 import Buttons from './Buttons';
-import React from 'react'
+import {useState} from 'react'
 
 function App() {
 
-  const [color, setColor] = React.useState(
+  const [color, setColor] = useState(
     ["white", "white", "white", "white"])
 
   function djSmall(){
@@ -48,24 +48,9 @@ function App() {
 
   return (
     <div className="App">
-      <div style={{backgroundColor: color[0]}} className='square1'>1</div>
-      <div style={{backgroundColor: color[1]}} className='square2'>2</div>
-      <div style={{backgroundColor: color[2]}} className='square3'>3</div>
-      <div style={{backgroundColor: color[3]}} className='square4'>4</div>
+      <Colors style0={{backgroundColor: color[0]}}  style1={{backgroundColor: color[1]}} style2={{backgroundColor: color[2]}} style3={{backgroundColor: color[3]}}/>
+      <Buttons djSmall={djSmall} topPurp={topPurp} leftBlue={leftBlue} rightBlue={rightBlue} bigTime0={bigTime0} bigTime1={bigTime1} bigTime2={bigTime2} bigTime3={bigTime3} makeNoise={makeNoise}/>
 
-    <div className='btnDiv'>
-    <button onClick={djSmall} className='btn'>DJ Small</button>
-    <button onClick={topPurp} className='btn'>Party DJ</button>
-    <button onClick={leftBlue} className='btn'>Left Blue</button>
-    <button onClick={rightBlue} className='btn'>Right Blue</button>
-    <button onClick={bigTime0} className='btn'>Big DJ one</button>
-    <button onClick={bigTime1} className='btn'>Big DJ Two</button>
-    <button onClick={bigTime2} className='btn'>Big DJ Three</button>
-    <button onClick={bigTime3} className='btn'>Big DJ Four</button>
-    <button onClick={makeNoise} className='btn'>Make Noise</button>
-    </div>
-
-    {/* <Buttons   /> */}
     </div>
   );
 }
