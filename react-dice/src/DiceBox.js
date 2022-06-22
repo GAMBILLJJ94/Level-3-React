@@ -8,6 +8,7 @@ export default function DiceBox(){
     const randomNum2 = Math.floor(Math.random() * 6)
     const randomNum3 = Math.floor(Math.random() * 6)
     const randomNum4 = Math.floor(Math.random() * 6)
+    
     const [number, setNumber] = React.useState([1,2,3,4,5])
 
     function newNums(){
