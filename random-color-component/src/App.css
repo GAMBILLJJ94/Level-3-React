@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.ColorBox {
+  border: solid black 3px;
+  height:800px;
+  width:800px;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+}

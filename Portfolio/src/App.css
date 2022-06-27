@@ -17,24 +17,19 @@ body {
     }
 }
 
-
-.App {
-  
-}
-
 .header {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to top left, #ffffff, #fb3b29);
+  background-image: linear-gradient(to top left, #573737, #d12f20);
   background-clip: text;
   color: transparent;
   text-shadow:
-     1px 1px 2px rgb(23, 11, 79);
+    1px 1px 2px rgb(23, 11, 79);
   justify-content: left;
   margin-top: 12%;
   margin-left: 20px;
   font-size: 40px;
-  line-height: 4px;
+  line-height: 50px; 
 }
 
 a, a:hover, a:focus, a:active {
@@ -47,12 +42,12 @@ a, a:hover, a:focus, a:active {
   justify-content: space-around;
   margin-top: 50%;
 }
-.html{
-  
-}
 
 .navbar--top {
   display: flex;
+  position: fixed;
+  top:0;
+  width: 100%;
   justify-content: space-evenly;
   color: whitesmoke;
   background: linear-gradient(to right,#3b2fbe,#8735ab,#1e11a3,#7e3c9b);
@@ -70,6 +65,55 @@ a, a:hover, a:focus, a:active {
       -2px 0 0 #000,
       2px 2px 5px #000;
 }
+
+
+
+
+.chat-notification {
+  display: flex;
+  max-width: 24rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.chat-notification-logo-wrapper {
+  flex-shrink: 0;
+}
+.chat-notification-logo {
+  height: 4rem;
+  width: 4rem;
+}
+.chat-notification-content {
+  margin-left: 2.5rem;
+  padding-top: 0.25rem;
+}
+.chat-notification-title {
+  color: #1a202c;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+.chat-notification-message {
+  color: #718096;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  max-width: 60rem;
+  font-size: 30px;
+  color: azure;
+  font-family:Arial;
+  margin-left: 20px;
+  margin-top: 37%;
+}
+
+
+
 
 
 
