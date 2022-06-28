@@ -1,46 +1,68 @@
 import './App.css';
-import Meme from './Meme'
+import MemeList from './MemeList'
 import React from 'react'
 
 
 
 function App() {
 
+
+
+   //meme array for posting original meme from api
 const [meme, setMeme] = React.useState({
   topText:"",
   bottomText:"",
-  randomMeme:"https://pngimg.com/uploads/trollface/trollface_PNG12.png"
-})
+  randomMeme:"",
+  memeHere: false
+})   
 
-const [allMemes, setAllMemes] = React.useState([])
-    
+
+//array of all memes from api
+const [allMemes, setAllMemes] = React.useState([{
+  topText:meme.topText,
+  bottomText:meme.bottomText,
+  randomMeme:meme.randomMeme,
+  id:meme.id,
+  memeHere:false
+}])
+
+
+
+
     React.useEffect(() => {
-        fetch("https://api.imgflip.com/get_memes")
-            .then(res => res.json())
-            .then(data => setAllMemes(data.data.memes))
+        getData()
     }, [])
 
+    //function getting data from api, data being the meme images
+  async function getData (){
+    await fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemes(data.data.memes))
+        // return () => {
+        // }
 
+  }
+
+
+  //this function allows the new meme to randomize then populate, replacing the old meme
   function getMeme() {
-    // const memeArray = allMemes
     const randomNum = Math.floor(Math.random() * allMemes.length)
-    // setMeme(memeArray[randomNum].url)
     const {url} = allMemes[randomNum]
     console.log(url)
     setMeme(a => ({
       ...a,
-      randomMeme: url
+      randomMeme: url,
+      memeHere:true,
     }))
   }
 
- const [memeText, setMemeText] = React.useState({
-    topText:"",
-    bottomText:""
-})
+
+//state for both top and bottom meme text
+ const [memeText, setMemeText] = React.useState([])
 
   function AddText (event){
     const {name, value} = event.target
-    setMemeText(prevText => {
+    setMeme(prevText => {
         return {
             ...prevText,
             [name]: value
@@ -48,8 +70,45 @@ const [allMemes, setAllMemes] = React.useState([])
     })
 }
 
+  const [memeList, setMemeList] = React.useState([{
+    topText:"",
+    bottomText:"",
+    randomMeme:"",
+    id:"",
+    memeHere:false
+}])
 
-   
+  function memeToList(event){
+    event.preventDefault()
+    const {name, value} = event.target
+    console.log("attempted to add meme to list")
+    console.log(meme.randomMeme)
+    setMemeList(prevMeme => {
+      return [
+        ...prevMeme,
+        meme
+      ]
+    })
+    // setMeme(meme)
+    console.log(memeList)
+
+  }
+  function DelMemeBtn (e){
+        e.preventDefault()
+        console.log("delete this meme")
+        // setMemeList(prevMeme => {
+        //   return [
+        //     ...prevMeme,
+        //     memeList.memeHere=false
+        //   ]
+        // })
+    }
+  const memesListElements = memeList.map((meme, index) => {
+    return <MemeList key = {index} {...meme} /> })
+
+  
+  
+
   return (
     <div className="App">
       <header className="Navbar">
@@ -82,12 +141,20 @@ const [allMemes, setAllMemes] = React.useState([])
       </div>
 
       <div className="memeDiv">
-        <img className='MemeImg' src={meme.randomMeme}/>
-        <h2 className="memeTextTop">{memeText.topText}</h2>
-        <h2 className="memeTextBot">{memeText.bottomText}</h2>
+        {meme.memeHere && <img className='MemeImg' src={meme.randomMeme}/>}
+        {meme.memeHere && <h2 className="memeTextTop">{meme.topText}</h2>}
+        {meme.memeHere && <h2 className="memeTextBot">{meme.bottomText}</h2>}
+      </div>
+
+      <div className='save-meme-button-div'>
+        <button className='Btn' onClick={memeToList} >Add Meme To Your List 🖼</button>
+      </div>
+      
+      <div className='DelMemeBtn' >
+        {meme.memeHere && <div>{memesListElements}</div>}
+        
       </div>
         
-
   </div>    
   );
 }

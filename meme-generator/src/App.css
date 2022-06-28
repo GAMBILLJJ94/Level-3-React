@@ -41,6 +41,11 @@ body {
   justify-content: center;
   padding: 10px;
 }
+.save-meme-button-div{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
 
 .Btn {
   width: 82%;
@@ -61,7 +66,7 @@ body {
 }
 
 .MemeImg {
-  max-width: 100%;
+  max-width: 60%;
   border-radius: 6px;
 }
 
@@ -114,4 +119,68 @@ body {
       0 -2px 0 #000,
       -2px 0 0 #000,
       2px 2px 5px #000;
+}
+
+.MemeListDiv {
+  display: flex;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+
+.memeListTextTop {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.memeListTextBot {
+  position: absolute;
+  bottom: 5px;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.DelMemeBtn {
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
 }
