@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  background-color: rgb(118, 118, 118);
 }
 
 .Navbar {
@@ -124,9 +125,14 @@ body {
 .MemeListDiv {
   display: flex;
   position: relative;
-  text-align: center;
   justify-content: center;
+  margin: 26px 0;
 }
+.MemeListImg {
+  max-width: 60%;
+  border-radius: 6px;
+}
+
 
 .memeListTextTop {
   position: absolute;
@@ -178,9 +184,20 @@ body {
       -2px 0 0 #000,
       2px 2px 5px #000;
 }
-
+.buttons {
+  display: block;
+  position:absolute;
+  bottom:-20px;
+}
 .DelMemeBtn {
   text-align: center;
-  margin: auto;
-  border-radius: 10px;
+  border-radius: 8px;
 }
+.EditMemeBtn {
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%) ; */
