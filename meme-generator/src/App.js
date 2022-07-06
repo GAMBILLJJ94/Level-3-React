@@ -8,6 +8,7 @@ function App() {
 
 
 
+<<<<<<< HEAD
    //meme array for posting original meme from api
   const [meme, setMeme] = React.useState({
     topText:"",
@@ -134,6 +135,95 @@ function editMeme (){
 const memesListElements = memeList.map((meme,index) => {
     return <MemeList key = {index} {...meme} onEdit={() => editMeme(index)} onDelete={() => delMeme(index)}/>})
     
+=======
+  //meme array for posting original meme from api
+  const [meme, setMeme] = React.useState({
+      topText:"",
+      bottomText:"",
+      randomMeme:"",
+      memeHere: false,
+      
+    })   
+
+
+  //array of all memes from api
+  const [allMemes, setAllMemes] = React.useState([{
+      topText:meme.topText,
+      bottomText:meme.bottomText,
+      randomMeme:meme.randomMeme,
+      id:meme.id,
+      memeHere:false
+    }])
+
+    React.useEffect(() => {
+          getData()
+      }, [])
+
+  //function getting data from api, data being the meme images
+  async function getData (){
+      await fetch("https://api.imgflip.com/get_memes")
+              .then(res => res.json())
+              .then(data => setAllMemes(data.data.memes))
+              console.log(allMemes)
+          
+
+    }
+
+  //this function allows the new meme to randomize then populate, replacing the old meme
+  function getMeme() {
+      const randomNum = Math.floor(Math.random() * allMemes.length)
+      const {id} = allMemes[randomNum]
+      const {url} = allMemes[randomNum]
+      console.log(url)
+      console.log(id)
+      setMeme(a => ({
+        ...a,
+        randomMeme: url,
+        memeHere:true,
+        memeId:id
+      }))
+    }
+
+  //state for both top and bottom meme text
+  function AddText (event){
+      const {name, value} = event.target
+      setMeme(prevText => {
+          return {
+              ...prevText,
+              [name]: value
+          }
+      })
+  }
+
+  //Meme list useState below add meme button
+  const [memeList, setMemeList] = React.useState([{
+      topText:"",
+      bottomText:"",
+      randomMeme:"",
+      id:allMemes.id,
+      memeHere:false
+  }])
+
+  //function on button click adds meme to that list
+  function memeToList(event){
+      event.preventDefault()
+      const {name, value} = event.target
+      console.log(meme.randomMeme)
+      setMemeList(prevMeme => {
+        return [
+          ...prevMeme,
+          meme
+        ]
+      })
+    }
+
+  //Del meme filter index for deleting meme on click of delete button
+  const delMeme = (index) => setMemeList(memeList.filter((_, i) => i !== index))
+
+
+  const memesListElements = memeList.map((meme,index) => {
+    return <MemeList key = {index} {...meme} onDelete={() => delMeme(index)}/>})
+>>>>>>> adding
 
   return (
     //Header/navbar area

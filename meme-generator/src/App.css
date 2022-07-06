@@ -126,7 +126,11 @@ body {
   display: flex;
   position: relative;
   justify-content: center;
+<<<<<<< HEAD
   margin: 26px 0;
+=======
+  margin: 100px 0;
+>>>>>>> adding
 }
 .MemeListImg {
   max-width: 60%;
@@ -185,17 +189,117 @@ body {
       2px 2px 5px #000;
 }
 .buttons {
+<<<<<<< HEAD
   display: block;
   position:absolute;
   bottom:-20px;
+=======
+  display: flex;
+  position:absolute;
+  bottom:-80px;
+>>>>>>> adding
 }
 .DelMemeBtn {
   text-align: center;
   border-radius: 8px;
+<<<<<<< HEAD
+=======
+  margin: 0 0 0 0;
+>>>>>>> adding
 }
 .EditMemeBtn {
   text-align: center;
   border-radius: 8px;
+<<<<<<< HEAD
+=======
+  margin: 0 0 0 0;
+}
+.SaveMemeBtn {
+  text-align: center;
+  border-radius: 8px;
+  margin: 0 0 0 0;
+}
+
+.MemeEditText{
+  
+}
+
+.newInputForm{
+
+}
+
+.editInputBoxes{
+  display: block;
+  position: relative;
+}
+
+.inputsTop{
+  font-size: 30px;
+  height: 50px;
+  border-radius: 10px;
+  border-width: 3px;
+  border-color: lightgrey
+
+}
+.inputsBottom{
+  font-size: 30px;
+  height: 50px;
+  border-radius: 10px;
+  border-width: 3px;
+  border-color: lightgrey
+
+}
+
+.editListTop{
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+
+}
+.editListBottom{
+  position: absolute;
+  bottom: 5px;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+>>>>>>> adding
 }
 
 /* top:50%;
