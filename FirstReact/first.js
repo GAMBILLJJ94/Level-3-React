@@ -12,7 +12,7 @@ const navbar = (
         <ul>
             <li>New website build 50$</li>
             <li>Website makeover 40$</li>
-            <li>Webiste advice 10$</li>
+            <li>Webiste advice 10$  dddddd</li>
         </ul>
     </nav>
 )
