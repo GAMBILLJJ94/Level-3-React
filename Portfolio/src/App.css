@@ -1,8 +1,14 @@
+.App {
+  height:100rem;
+  position: relative;
+}
+
+
 body {
     background: linear-gradient(-45deg, #196180, #501964,  #196180);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    height: 100vh;
+    height: 200vh;
   }
   
   @keyframes gradient {
@@ -114,13 +120,15 @@ a, a:hover, a:focus, a:active {
 
 
 
-
+.icons {
+  display: flex;
+  margin-top: 70%;
+}
 
 
 
 .icon {
   cursor: pointer;
-  margin-bottom: 60px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
